@@ -27,9 +27,34 @@
 
       transition: color 0.2s;
 
+      & + a{
+        margin-left: 2rem;
+      }
+
       &:hover{
         color: var(--white);
       }
+
+      &.active{
+        color: var(--white);
+        font-weight: bold;
+      }
+
+      &.active::after{
+        content: '';
+        height: 3px;
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        background: var(--yellow-500);
+
+      }
     }
+  }
+
+  button{
+    margin-left: auto;
   }
 }

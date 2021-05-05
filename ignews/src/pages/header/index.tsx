@@ -1,4 +1,5 @@
 import style from './styles.module.scss';
+import {SignInButton} from '../signInButton'
 
 
 export default function Header(){
@@ -7,9 +8,11 @@ export default function Header(){
       <div className={style.headerContent}>
         <img src="/images/logo.svg" alt="ig.news"/>
         <nav>
-          <a>Home</a>
+          <a className={style.active}>Home</a>
           <a>Post</a>
         </nav>
+
+        <SignInButton />
       </div>
     </header>
   )
